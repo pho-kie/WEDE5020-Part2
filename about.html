@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Laphoshee Salon - braiding, nails, haircuts and tattoos.">
+
+        <title>About us</title>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body style = "background-color: beige;">
+    <header>
+        <nav>
+            <!--added picture tag, srcset and sizes-->
+            <picture>
+                <!--mobile image-->
+
+                <source media="(max-width: 37.5rem)" srcset="images/a-small.jpg">
+
+                <!--tablet image-->
+
+                <source media="(max-width: 59.375rem)" srcset="images/a-medium.jpg">
+
+                <!--desktop image and srcset and sizes-->
+
+                <img src="images/a.jpg" srcset="images/a-small.jpg 320w,
+                                                images/a-medium.jpg 640w,
+                                                images/a-large.jpg 1024w"
+                                        sizes="(max-width: 37.5rem) 90vw
+                                                (max-width: 59.375rem) 7vw
+                                                25rem"
+                                                alt="Laphoshee Salon">        
+            </picture>
+
+            <div class="nav-links">
+             <img src = "images/a.jpg" style="width: 400px; height: 350px;">
+            <br>
+            <a href="home.html">Home|</a>
+            <a href="about.html">About us</a>
+            <a href="services.html">Our Services</a>
+            <a href="contact.html">Contact us</a>
+            <a href="gallery.html">Gallery</a>
+            <hr>
+        </nav>
+    </header>
+    <main>
+        <!--this page is about the history of the salon and how they came about and what they aim for-->
+        <h2>About us</h2>
+        <p>Our salon was established in early 2019. 
+        It started as a very small organization with very little services to provide
+        for our customers which was braiding all types of hair and haircuts. Our main goal 
+        was to create an environment for our small community to get their desires to live. We 
+        unfortunately had to pause on our services during COVID-19. However, right after the pandemic was
+        over, we managed to get back on our feet, and we became better than before. Our services have become 
+        polished, better and effective during the COVID-19 period, and we are prepared to provide for 
+        our customer's needs and wants.</p>
+
+        <br>
+        <h3>Our Mission</h3>
+        <p>As an organization we aim to give what our customers need and to do every hairstyle, haircut, nails, 
+        and tattoos to the best of our capability and to make every each customer feel confident and cared for.  </p>
+
+        <!--users should know what are the salon's operating hours-->
+        <br>
+        <h3>Operating Hours</h3>
+        <ul>
+            <li>Monday - Friday: 8:00am-6:30pm</li>
+            <li>Saturday - Sunday: 8:00am-14:00pm</li>
+            <li>Public Holidays - closed</li>
+        </ul>
+
+    </main>
+    <hr>
+    <footer>&copy;ST10533971#Laphoshee_Salon</footer>
+    </body>
+</html>

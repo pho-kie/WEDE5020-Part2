@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact</title>
+    </head>
+    <body style = "background-color: beige;">
+    <header>
+        <nav>
+             <img src = "images/a.jpg" style="width: 400px; height: 350px;">
+            <br>
+            <a href="home.html">Home|</a>
+            <a href="about.html">About us</a>
+            <a href="services.html">Our Services</a>
+            <a href="contact.html">Contact us</a>
+            <a href="gallery.html">Gallery</a>
+            <hr>
+        </nav>
+    </header>
+    <main>
+    <!----contact details so that customers can be able to reach the organisation-->
+<h2>Contact Details</h2>
+<p>We would appreciate it to hear from you! Reach out to book an appointment or if you have a query.</p>
+<h3>You can find us on:</h3>
+<p>Phone: 081 123 4567</p>
+<p>Email: <a href = "mpholamula55@gmail.com" >Send an email</a> </p>
+<p>Address: <a href = "https://maps.app.goo.gl/WYEwHfiLCw4KSAoN8">123 Orange Farm, Johannesburg 1805 </a></p>
+
+<!---promts the user to enter their details and query or message or book an appointment-->
+<h3>Send a message or a query</h3>
+
+<form action="contact.html"> 
+
+    <!--user must enter first name-->
+    <div>
+    <label for="userName">First Name: </label>
+    <input type="text" id="userName" name="userName" placeholder="Enter your name here">
+    
+<!--user must enter last name-->
+    <br><br>
+    <div>
+    <label for="userLastName">Last Name: </label>
+    <input type="text" id="userLastName" name="userLastName" placeholder="Enter your last name here">
+    
+    <!--user must enter email for communication-->
+    <br><br>
+    <div>
+    <label for="email">Email: </label>
+    <input type="email" id="email" name="email" placeholder="mpho@gmail.com" required>
+
+    <!--user must enter their phone number for feedback-->
+    <br><br>
+    <div>
+    <label for="phone">Phone Number: </label>
+    <input type="number" id="phone" name="phone" placeholder="(012) 345 6789" required>  
+<br>
+
+<!---user must enter message or query-->
+    <br>
+    <div>
+        <label for = "message">Message or Query</label>
+        <input type="text" id="message" placeholder="Enter here" maxlength="450" required>
+    </div>
+
+    <br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57143.429287766514!2d27.86574445!3d-26.47299055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95ab178daa65d1%3A0xb125f7b60163e674!2sOrange%20Farm%2C%201805!5e0!3m2!1sen!2sza!4v1786686639861!5m2!1sen!2sza"
+     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <br><br>
+    <!---User should be able to click on the reset or submit button by the end of entering their details-->
+    <div>
+        <input type="reset">
+    </div>
+
+    <br><br>
+    <div>
+        <input type = "submit">
+    </div>
+
+</form>
+    </main>
+    <hr>
+    <footer>&copy;ST10533971#Laphoshee_Salon</footer>
+    </body>
+</html>

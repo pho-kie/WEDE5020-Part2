@@ -1,0 +1,339 @@
+/*******RESET****** */
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+/******Colours variables to be later used****/
+:root{
+   --white: #ffffff;
+--pink: #e8a9bd;
+--light-pink: #f8e1e8;
+--dark-pink: #c97896;
+--purple: #8d7199;
+--light-purple: #e8ddea;
+--dark-purple: #5f4968;
+--black: #1d1820;
+--beige: #f4eadc;
+--dark-beige: #d9c7b1;
+--soft-black : #302a30;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+background-color: var(--beige) !important;
+color: var(--black);
+
+font-family: 'Quicksand', sans-serif;
+font-size: 1rem;
+line-height: 1.7;
+
+text-align: center;
+}
+
+/*********main page width*****/
+header, main, footer{
+    width: 92%;
+    /* rem is a relative unit */
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+/*****header********/
+header{
+    padding: 1.5rem 0 1rem;
+}
+
+/****navigation*****/
+nav{
+    background: rgba(255, 255, 255, 0.8);
+    border: 0.08rem solid var(--light-pink);
+    padding: 1.25rem;
+    box-shadow: 0 0.5rem 1.5rem
+    rgba(69, 44, 73, 0.08);
+}
+/* salon image is no longer a fixed width
+i will use max-width and % to allow it to resize*/
+
+nav img{
+    display: block;
+    width: min(100%, 25rem);
+    height: auto;
+
+    /* to keep the shape of the image consistant*/
+    aspect-ratio: 8/7;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+
+    /* for the images to have rounded corners */
+    border-radius: 1.5rem;
+}
+
+    /* navigation links */
+nav a{
+    display: inline-block;
+    margin: 0.25rem 0.35rem;
+    padding: 0.45rem 0.8rem;
+    color: var(--dark-purple);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus{
+    background: var(--light-pink);
+    color: var(--dark-purple);
+}
+
+/* horizontal line */
+hr{
+    border: 0;
+    border-top: 0.8rem solid var(--pink);
+    margin: 1.5rem;
+}
+
+/* main content */
+main{
+padding: 1rem 0 2rem;
+}
+
+/* headings */
+h2, h3, h4{
+    color: var(--dark-purple);
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.15;
+}
+
+/* clamp() allows the heading to resize according to the screen size */
+h2{
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 1.5rem 0 1rem;
+}
+
+h3{
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    margin: 1.5rem 0 0.5rem;
+}
+
+h4{
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+/* paragraphs */
+p{
+    max-width: 52rem;
+    margin: 0.75rem auto;
+}
+/* the lists */
+ul{
+    /* i used % width so that it could shrink on smaller screens */
+    width: min(90%, 42rem);
+    margin: 1rem auto 1.5rem;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 1.25rem;
+}
+li{
+    margin: 0.45rem 0;
+}
+
+/* buttons/ links */
+main > a,
+main form input[type = 'submit'],
+main form input[type = 'reset']{
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    border: 0.08rem solid var(--pink);
+    border-radius: 2rem;
+    background: var(--white);
+    color: var(--dark-purple);
+    font-family: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+main > a:hover,
+main form input[type = 'submit'] :hover,
+main form input[type = 'reset'] :hover{
+    background: var(--light-pink);
+}
+
+/* the introduction video is no longer in a fixed width because it will not adjust automatically to suite screens */
+video{
+    display: block;
+    width: 100%;
+    max-width: 62.5rem;
+    height: auto;
+    aspect-ratio: 10/3;
+    object-fit: cover;
+    margin: 1rem auto 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.6rem 1.5rem rgba(69, 44, 73, 0.12);
+}
+
+/* must have response images as mentioned in the rubrig, images cannot become wider than their container*/
+main img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* gallery and service are responsive and have rounded corners */
+main .gallery-grid img,
+main .service img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 1.25rem;
+}
+
+/* gallery and service grid. im not sure if this one works things gor complicated along the way*/
+.gallery-grid,
+.service-grid{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+    width: 100%;
+    margin: 1rem auto 2rem;
+}
+
+/* form */
+form{
+    width: min(100%, 42rem);
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.72);
+    border: 0.08rem solid var(--light-pink);
+    border-radius: 1.5rem;
+    text-align: left;
+}
+
+form div{
+    margin-bottom: 0.8rem;
+}
+label{
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+/*form inputs use 100% so they fit small screens */
+input[type = 'text'],
+input[type = 'email'],
+input[type = 'tel']{
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border: 0.08rem solid #e9d1e1;
+    border-radius: 0.8rem;
+    background: var(--white);
+    color: var(--black);
+    font: inherit;
+}
+input :focus{
+    outline: 0.15rem solid var(--pink);
+    outline-offset: 0.1rem;
+}
+
+/* google map */
+iframe{
+    display: block;
+    width: 100%;
+    max-width: 37.5rem;
+    height: min(28rem, 70vw);
+    margin: 1.5rem auto;
+    border: 0;
+    border-radius: 1.25rem;
+}
+/* footer */
+footer{
+    padding: 1rem 0 2rem;
+    color: var(--purple);
+    font-size: 0.9rem;
+}
+
+/* tablet breakpoint as required in the poe */
+@media(max-width: 59.375rem){
+    header, main, footer{
+        width: 94%;
+    }
+    /* for tablet it uses 3 columns instead of 4 */
+    .gallery-grid,
+    .service-grid{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    /* navigation becomes smaller */
+    nav a{
+        font-size: 0.95rem;
+    }
+}
+
+/* mobile breakpoint whereby the navigation becomes vertical and the gallery changes to two columns */
+@media (max-width: 37.5rem){
+    /* smaller font on mobile */
+    html{
+        font-size: 93.75%;
+    }
+    header,
+    main,
+    footer{
+        width: 92%;
+    }
+    nav{
+        padding: 1rem 0.75;
+        border-radius: 1.25rem;
+    }
+    nav img{
+        width: min(100%, 20rem);
+    }
+    /* navigation links become full-width blocks on mobile */
+    nav a{
+        display: block;
+        width: 100%;
+        margin: 0.2rem 0;
+        padding: 0.55rem;
+    }
+
+/* mobile gallery uses 2 columns */
+    .gallery-grid,
+    .service-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gab: 0.8rem;
+    }
+    /* video changes to a 16:9 on mobile*/
+    video{aspect-ratio: 16/9;
+    }
+    ul{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    }
+}
+/* small moblie breakpoint */
+@media(max-width: 28.125rem){
+   html{ font-size: 87.5%;
+   }
+}
+/* gallery and services images become 1column */
+.gallery-grid,
+.service-grid{
+    grid-template-columns: 1fr;
+}
+.gallery-grid img,
+.service-grid img{
+    max-width: 20rem;
+    margin: 0 auto;
+}
+form{
+    form{
+        padding: 1rem;
+    }
+}
+
+.logo {
+    width: min(100%, 25rem);
+    height: auto;
+}
